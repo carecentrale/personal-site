@@ -1,0 +1,196 @@
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Nicola Delnero</title>
+<style>
+:root {
+  --bg: #F7F7F5; --surface: #FFFFFF; --fg: #16202B; --muted: #5B6675; --rule: #DCDFE4; --accent: #0E6A67;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F1419; --surface: #171E26; --fg: #E8EBEF; --muted: #9AA5B3; --rule: #2A333E; --accent: #5FC4BE;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F1419; --surface: #171E26; --fg: #E8EBEF; --muted: #9AA5B3; --rule: #2A333E; --accent: #5FC4BE;
+  color-scheme: dark;
+}
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 17px; line-height: 1.65;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 40px;
+}
+main { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 52px; }
+h1, h2 { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; text-wrap: balance; margin: 0; }
+h1 { font-size: 46px; line-height: 1.1; letter-spacing: -0.01em; }
+h2 { font-size: 26px; line-height: 1.25; }
+p { margin: 0; }
+p + p { margin-top: 16px; }
+a { color: var(--accent); }
+.label { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.lede { font-size: 20px; line-height: 1.5; }
+.muted { color: var(--muted); }
+header { display: flex; flex-direction: column; gap: 18px; }
+ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 20px; }
+.card { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 22px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.card h3 { font-family: "Source Serif 4", Georgia, serif; font-size: 19px; font-weight: 600; margin: 0; }
+.card p { font-size: 16px; color: var(--muted); }
+.projects { display: flex; flex-direction: column; gap: 16px; margin-top: 20px; }
+.project { border-top: 1px solid var(--rule); padding-top: 18px; display: flex; flex-direction: column; gap: 6px; }
+.project h3 { font-family: "Source Serif 4", Georgia, serif; font-size: 20px; font-weight: 600; margin: 0; }
+.project a { font-size: 15px; }
+.form { display: flex; flex-direction: column; gap: 14px; margin-top: 20px; }
+.form label { display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: var(--muted); }
+.form input, .form textarea {
+  font: inherit; font-size: 16px; color: var(--fg); background: var(--surface);
+  border: 1px solid var(--rule); border-radius: 6px; padding: 10px 12px; min-width: 0; width: 100%; box-sizing: border-box;
+}
+.form textarea { min-height: 120px; resize: vertical; }
+button {
+  font: inherit; font-size: 15px; color: var(--bg); background: var(--accent); border: 1px solid var(--accent);
+  border-radius: 999px; padding: 10px 20px; cursor: pointer; align-self: flex-start;
+}
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.status { font-size: 14px; color: var(--muted); min-height: 1.4em; }
+.legal { display: flex; flex-direction: column; gap: 14px; }
+.legal h3 { font-family: "Source Serif 4", Georgia, serif; font-size: 19px; font-weight: 600; margin: 8px 0 0; }
+.legal p { font-size: 15px; color: var(--muted); }
+.draft { font-size: 14px; color: var(--muted); border-left: 2px solid var(--rule); padding-left: 12px; }
+footer { border-top: 1px solid var(--rule); padding-top: 20px; color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+@media (max-width: 480px) { h1 { font-size: 38px; } }
+</style>
+
+<main>
+  <header>
+    <p class="label">Product leader</p>
+    <h1>Hi, I'm Nicola.</h1>
+    <p class="lede">I've spent about fifteen years making payments products that merchants and banks actually use. Lately I'm also building with AI, mostly because it makes the work faster and more interesting.</p>
+  </header>
+
+  <section aria-labelledby="about">
+    <p class="label">About</p>
+    <h2 id="about">Who I am</h2>
+    <p>I started as a developer, moved into product, and I still think like one. I like the details: how a settlement file moves, why a pricing rule breaks, what a merchant really needs from a terminal. Most of my career has been in fintech and payments, in Montreal and remotely from Quebec.</p>
+    <p>I'm bilingual in French and English, and I enjoy working across teams, from engineering and operations to sales and the people who sign the contracts.</p>
+    <p>Outside of work I sit on the board of a non-profit, and I mentor people in the Chatfuel and LinkedIn communities who are moving into product or AI roles.</p>
+  </section>
+
+  <section aria-labelledby="expertise">
+    <p class="label">Expertise</p>
+    <h2 id="expertise">What I'm good at</h2>
+    <div class="areas">
+      <div class="card">
+        <h3>Payments guru</h3>
+        <p>Payfac, ISO and gateway portfolios. Hardware terminals, sponsor bank relationships, and multi-currency operations.</p>
+      </div>
+      <div class="card">
+        <h3>Bank-to-bank guru</h3>
+        <p>Bank-to-bank transfer infrastructure at scale, from $120B in annual volume to the settlement details that make it work.</p>
+      </div>
+      <div class="card">
+        <h3>Mergers and migrations</h3>
+        <p>Moving merchant portfolios from one platform to another, and merging product stacks after an acquisition without losing the roadmap.</p>
+      </div>
+      <div class="card">
+        <h3>Building with AI</h3>
+        <p>Using Claude and other agents to turn specs and meeting notes into working requirements and demos, and to ship faster.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="teams">
+    <p class="label">Leading people</p>
+    <h2 id="teams">Leading and building teams</h2>
+    <p>Most of my jobs have meant running product managers and scrum teams at the same time. Over the years that has ranged from a small group of two or four product managers to a roadmap spread across eight teams.</p>
+    <p>What I care about is clear ownership. Everyone should know what they're responsible for, why it matters, and how it ties to the business. I also like building the team itself: hiring, coaching junior product people, and setting up the rhythm (discovery, planning, reviews) so the group can run without me in every meeting.</p>
+  </section>
+
+  <section aria-labelledby="ai-section">
+    <p class="label">AI in my work</p>
+    <h2 id="ai-section">Building with agentic AI</h2>
+    <p>I use AI every day, and I've started building with it too. The most useful thing I've found is turning messy inputs (regulator specs, processor docs, meeting transcripts) into requirements a team can actually build from. In one case that took a month from start to a working demo.</p>
+    <p>I also build AI into my side projects, and I'm more interested in the parts that need human judgment than in the parts that can be automated. Good output needs a person checking it against real facts, so I design for that.</p>
+  </section>
+
+  <section aria-labelledby="projects">
+    <p class="label">Side projects</p>
+    <h2 id="projects">Things I've built</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>fuzzyHR</h3>
+        <p class="muted">An AI job-search tool. It finds roles, tailors a CV and cover letter for each one, and tracks follow-ups. It only uses experience you actually have, and it tells you when something is missing.</p>
+        <a href="https://fuzzyhr.vercel.app" target="_blank" rel="noopener">fuzzyhr.vercel.app</a>
+      </div>
+      <div class="project">
+        <h3>Adventurers of Drenerics</h3>
+        <p class="muted">A 3D game that runs in the browser, with on-screen controls so it works on a phone too.</p>
+        <a href="https://free-game-vitale.vercel.app/" target="_blank" rel="noopener">free-game-vitale.vercel.app</a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="contact">
+    <p class="label">Get in touch</p>
+    <h2 id="contact">Say hello</h2>
+    <p>Got a role, a question about payments, or a project you want a second opinion on? Send a message below, or find me on LinkedIn.</p>
+    <form class="form" id="contact-form" novalidate>
+      <label>Name
+        <input type="text" name="name" autocomplete="name" required>
+      </label>
+      <label>Email
+        <input type="email" name="email" autocomplete="email" required>
+      </label>
+      <label>Message
+        <textarea name="message" required></textarea>
+      </label>
+      <button type="submit">Send message</button>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </form>
+    <p style="margin-top:16px"><a href="https://www.linkedin.com/in/nicoladelnero/" target="_blank" rel="noopener">Connect on LinkedIn</a></p>
+  </section>
+
+  <section aria-labelledby="terms">
+    <p class="label">Legal</p>
+    <h2 id="terms">Terms of use</h2>
+    <div class="legal">
+      <p>This site is a personal portfolio. The content describes my work and experience and is provided for information only. Links to other sites are provided for convenience, and I'm not responsible for their content. Projects linked here are shared as-is, without warranty.</p>
+      <p class="draft">Draft text. Have it reviewed before relying on it.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="privacy">
+    <p class="label">Legal</p>
+    <h2 id="privacy">Privacy policy</h2>
+    <div class="legal">
+      <p>If you send a message through this page, I use the name, email and message you enter only to reply to you. I don't sell or share them, and I don't add you to any list. I keep messages only as long as needed to respond.</p>
+      <p>This site doesn't use tracking cookies. Links to LinkedIn and other sites are governed by their own privacy policies.</p>
+      <p class="draft">Draft text. Have it reviewed before relying on it, and confirm how the form stores messages once it's connected.</p>
+    </div>
+  </section>
+
+  <footer>
+    <span>Nicola Delnero · Laval, Quebec</span>
+    <a href="#terms">Terms of use</a>
+    <a href="#privacy">Privacy policy</a>
+  </footer>
+</main>
+
+<script>
+(function () {
+  var form = document.getElementById('contact-form');
+  var status = document.getElementById('status');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      status.textContent = 'Fill in your name, email and message to send.';
+      return;
+    }
+    status.textContent = 'Sending is not connected yet on this page.';
+  });
+})();
+</script>
