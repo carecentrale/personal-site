@@ -61,10 +61,20 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .legal p { font-size: 15px; color: var(--muted); }
 footer { border-top: 1px solid var(--rule); padding-top: 20px; color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 20px; }
 @media (max-width: 480px) { h1 { font-size: 38px; } }
+
+.headshot { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; object-position: 50% 30%; border: 1px solid var(--rule); max-width: 100%; }
+.timeline { position: relative; display: flex; flex-direction: column; gap: 28px; margin-top: 20px; padding-left: 28px; border-left: 2px solid var(--rule); }
+.tl { position: relative; display: flex; flex-direction: column; gap: 6px; }
+.tl::before { content: ""; position: absolute; left: -35px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); }
+.tl .year { font-family: "Source Serif 4", Georgia, serif; font-size: 22px; font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; }
+.tl h3 { font-family: "Source Serif 4", Georgia, serif; font-size: 18px; font-weight: 600; margin: 0; }
+.tl .where { color: var(--muted); font-size: 14px; }
+.tl ul { margin-top: 4px; }
 </style>
 
 <main>
   <header>
+    <img class="headshot" src="headshot.jpg" alt="Nicola Delnero, smiling in a navy blazer">
     <p class="label">Product leader</p>
     <h1>Hi, I'm Nicola.</h1>
     <p class="lede">I've spent about fifteen years making payments products that merchants and banks actually use. Lately I'm also building with AI, mostly because it makes the work faster and more interesting.</p>
@@ -113,6 +123,87 @@ footer { border-top: 1px solid var(--rule); padding-top: 20px; color: var(--mute
     <h2 id="ai-section">Building with agentic AI</h2>
     <p>I use AI every day, and I've started building with it too. The most useful thing I've found is turning messy inputs (regulator specs, processor docs, meeting transcripts) into requirements a team can actually build from. In one case that took a month from start to a working demo.</p>
     <p>I also build AI into my side projects, and I'm more interested in the parts that need human judgment than in the parts that can be automated. Good output needs a person checking it against real facts, so I design for that.</p>
+  </section>
+
+  <section aria-labelledby="timeline">
+    <p class="label">Career</p>
+    <h2 id="timeline">Where I've been</h2>
+    <div class="timeline">
+      <div class="tl">
+        <span class="year">2026</span>
+        <h3>Head of Product Management &amp; Strategy, Merchant Services North America</h3>
+        <p class="where">Shift4 · March 2026 to present</p>
+        <ul>
+          <li>Lead four product managers and their teams, and the roadmap across five scrum teams after the Bambora acquisition.</li>
+          <li>Built a two-year plan to bring bank-to-bank settlement into Shift4's payment stack.</li>
+          <li>Built an ACH payment file merger with Claude, from specs to a working demo in one month. Rolled out to 2% of AMEX merchants in Q4 2026.</li>
+        </ul>
+      </div>
+      <div class="tl">
+        <span class="year">2024</span>
+        <h3>Head of Product Management &amp; Strategy, Merchant Services North America</h3>
+        <p class="where">Worldline · September 2024 to March 2026</p>
+        <ul>
+          <li>Led two product managers and set strategy for Worldline's North America merchant line.</li>
+          <li>Ran the roadmap across eight scrum teams at peak.</li>
+          <li>Kept the product vision continuous through Project Victoria, the divestment to Shift4.</li>
+        </ul>
+      </div>
+      <div class="tl">
+        <span class="year">2022</span>
+        <h3>Head of Product, ISV</h3>
+        <p class="where">Worldline · September 2022 to September 2024</p>
+        <ul>
+          <li>Owned a payments portfolio of 1,500+ ISVs, covering 120K merchants and $120B in annual bank-to-bank volume.</li>
+          <li>Grew the portfolio 25% year over year.</li>
+        </ul>
+      </div>
+      <div class="tl">
+        <span class="year">2022</span>
+        <h3>Senior Product Manager, Digital Solutions Canada</h3>
+        <p class="where">Global Payments · Montreal · January 2022 to September 2022</p>
+        <ul>
+          <li>Led the Bermuda merchant portfolio migration.</li>
+          <li>Led go-to-market for omnichannel payment apps and defined the vision for two SaaS brands.</li>
+        </ul>
+      </div>
+      <div class="tl">
+        <span class="year">2020</span>
+        <h3>Product Manager</h3>
+        <p class="where">Global Payments · Montreal · March 2020 to January 2022</p>
+        <ul>
+          <li>Led the Desjardins merchant portfolio migration in 2021, recognized with an internal award for execution.</li>
+          <li>Managed the product lifecycle for Global Payments Canada's digital solutions portfolio.</li>
+        </ul>
+      </div>
+      <div class="tl">
+        <span class="year">2019</span>
+        <h3>Founder &amp; Director of Product</h3>
+        <p class="where">FuzzyCrew · 2019 to 2020</p>
+        <ul>
+          <li>Ran AI-driven chatbot and digital transformation consulting for B2B and B2C clients.</li>
+        </ul>
+      </div>
+      <div class="tl">
+        <span class="year">2012</span>
+        <h3>Managing Director, Digital Transformation &amp; Product</h3>
+        <p class="where">Action Media / JoMedia / Playster · Montreal · 2012 to 2019</p>
+        <ul>
+          <li>Grew from IT project manager and product owner to managing director over seven years, leading six direct reports.</li>
+          <li>Led the company-wide Salesforce rollout.</li>
+          <li>Built an AI-driven risk and fraud tool that cut negative revenue by about $1.5M per quarter.</li>
+        </ul>
+      </div>
+      <div class="tl">
+        <span class="year">2009</span>
+        <h3>VP Product Management</h3>
+        <p class="where">iReel · Montreal · 2009 to 2012</p>
+        <ul>
+          <li>Managed 1,000+ affiliates across CPC, CPA and CPM campaigns, beating growth goals by more than 200%.</li>
+          <li>Set up an offshore support office from scratch, cutting costs 75%.</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section aria-labelledby="projects">
