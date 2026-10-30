@@ -59,7 +59,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .legal { display: flex; flex-direction: column; gap: 14px; }
 .legal h3 { font-family: "Source Serif 4", Georgia, serif; font-size: 19px; font-weight: 600; margin: 8px 0 0; }
 .legal p { font-size: 15px; color: var(--muted); }
-.draft { font-size: 14px; color: var(--muted); border-left: 2px solid var(--rule); padding-left: 12px; }
 footer { border-top: 1px solid var(--rule); padding-top: 20px; color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 20px; }
 @media (max-width: 480px) { h1 { font-size: 38px; } }
 </style>
@@ -147,6 +146,7 @@ footer { border-top: 1px solid var(--rule); padding-top: 20px; color: var(--mute
       <label>Message
         <textarea name="message" required></textarea>
       </label>
+      <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
       <button type="submit">Send message</button>
       <p class="status" id="status" role="status" aria-live="polite"></p>
     </form>
@@ -158,7 +158,6 @@ footer { border-top: 1px solid var(--rule); padding-top: 20px; color: var(--mute
     <h2 id="terms">Terms of use</h2>
     <div class="legal">
       <p>This site is a personal portfolio. The content describes my work and experience and is provided for information only. Links to other sites are provided for convenience, and I'm not responsible for their content. Projects linked here are shared as-is, without warranty.</p>
-      <p class="draft">Draft text. Have it reviewed before relying on it.</p>
     </div>
   </section>
 
@@ -168,7 +167,6 @@ footer { border-top: 1px solid var(--rule); padding-top: 20px; color: var(--mute
     <div class="legal">
       <p>If you send a message through this page, I use the name, email and message you enter only to reply to you. I don't sell or share them, and I don't add you to any list. I keep messages only as long as needed to respond.</p>
       <p>This site doesn't use tracking cookies. Links to LinkedIn and other sites are governed by their own privacy policies.</p>
-      <p class="draft">Draft text. Have it reviewed before relying on it, and confirm how the form stores messages once it's connected.</p>
     </div>
   </section>
 
@@ -183,6 +181,7 @@ footer { border-top: 1px solid var(--rule); padding-top: 20px; color: var(--mute
 (function () {
   var form = document.getElementById('contact-form');
   var status = document.getElementById('status');
+  var button = form.querySelector('button[type="submit"]');
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (!form.checkValidity()) {
@@ -190,7 +189,26 @@ footer { border-top: 1px solid var(--rule); padding-top: 20px; color: var(--mute
       status.textContent = 'Fill in your name, email and message to send.';
       return;
     }
-    status.textContent = 'Sending is not connected yet on this page.';
+    button.disabled = true;
+    status.textContent = 'Sending...';
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        message: form.message.value.trim(),
+        website: form.website ? form.website.value : ''
+      })
+    }).then(function (r) {
+      if (!r.ok) throw new Error('bad status');
+      form.reset();
+      status.textContent = 'Thanks, your message was sent.';
+    }).catch(function () {
+      status.textContent = 'Something went wrong. Try again or use LinkedIn.';
+    }).finally(function () {
+      button.disabled = false;
+    });
   });
 })();
 </script>
