@@ -1,0 +1,169 @@
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Career timeline · Nicola Delnero</title>
+<style>
+:root {
+  --bg: #F7F7F5; --surface: #FFFFFF; --fg: #16202B; --muted: #5B6675; --rule: #DCDFE4; --accent: #0E6A67;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F1419; --surface: #171E26; --fg: #E8EBEF; --muted: #9AA5B3; --rule: #2A333E; --accent: #5FC4BE;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F1419; --surface: #171E26; --fg: #E8EBEF; --muted: #9AA5B3; --rule: #2A333E; --accent: #5FC4BE;
+  color-scheme: dark;
+}
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 17px; line-height: 1.65;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 40px;
+}
+main { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 52px; }
+h1, h2 { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; text-wrap: balance; margin: 0; }
+h1 { font-size: 46px; line-height: 1.1; letter-spacing: -0.01em; }
+h2 { font-size: 26px; line-height: 1.25; }
+p { margin: 0; }
+p + p { margin-top: 16px; }
+a { color: var(--accent); }
+.label { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.lede { font-size: 20px; line-height: 1.5; }
+.muted { color: var(--muted); }
+header { display: flex; flex-direction: column; gap: 18px; }
+ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 20px; }
+.card { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 22px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.card h3 { font-family: "Source Serif 4", Georgia, serif; font-size: 19px; font-weight: 600; margin: 0; }
+.card p { font-size: 16px; color: var(--muted); }
+.projects { display: flex; flex-direction: column; gap: 16px; margin-top: 20px; }
+.project { border-top: 1px solid var(--rule); padding-top: 18px; display: flex; flex-direction: column; gap: 6px; }
+.project h3 { font-family: "Source Serif 4", Georgia, serif; font-size: 20px; font-weight: 600; margin: 0; }
+.project a { font-size: 15px; }
+.form { display: flex; flex-direction: column; gap: 14px; margin-top: 20px; }
+.form label { display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: var(--muted); }
+.form input, .form textarea {
+  font: inherit; font-size: 16px; color: var(--fg); background: var(--surface);
+  border: 1px solid var(--rule); border-radius: 6px; padding: 10px 12px; min-width: 0; width: 100%; box-sizing: border-box;
+}
+.form textarea { min-height: 120px; resize: vertical; }
+button {
+  font: inherit; font-size: 15px; color: var(--bg); background: var(--accent); border: 1px solid var(--accent);
+  border-radius: 999px; padding: 10px 20px; cursor: pointer; align-self: flex-start;
+}
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.status { font-size: 14px; color: var(--muted); min-height: 1.4em; }
+.legal { display: flex; flex-direction: column; gap: 14px; }
+.legal h3 { font-family: "Source Serif 4", Georgia, serif; font-size: 19px; font-weight: 600; margin: 8px 0 0; }
+.legal p { font-size: 15px; color: var(--muted); }
+footer { border-top: 1px solid var(--rule); padding-top: 20px; color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+@media (max-width: 480px) { h1 { font-size: 38px; } }
+
+.headshot { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; object-position: 50% 30%; border: 1px solid var(--rule); max-width: 100%; }
+.timeline { position: relative; display: flex; flex-direction: column; gap: 28px; margin-top: 20px; padding-left: 28px; border-left: 2px solid var(--rule); }
+.tl { position: relative; display: flex; flex-direction: column; gap: 6px; }
+.tl::before { content: ""; position: absolute; left: -35px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); }
+.tl .year { font-family: "Source Serif 4", Georgia, serif; font-size: 22px; font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; }
+.tl h3 { font-family: "Source Serif 4", Georgia, serif; font-size: 18px; font-weight: 600; margin: 0; }
+.tl .where { color: var(--muted); font-size: 14px; }
+.tl ul { margin-top: 4px; }
+
+.back { font-size: 15px; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="back"><a href="/">← Back to Nicola's home</a></p>
+    <p class="label">Career</p>
+    <h1>Career timeline</h1>
+    <p class="lede">The roles, the teams and the work, year by year.</p>
+  </header>
+
+  <section aria-labelledby="timeline">
+    <p class="label">Career</p>
+    
+    <div class="timeline">
+      <div class="tl">
+        <span class="year">2026</span>
+        <h3>Head of Product Management &amp; Strategy, Merchant Services North America</h3>
+        <p class="where">Shift4 · March 2026 to present</p>
+        <ul>
+          <li>Lead four product managers and their teams, and the roadmap across five scrum teams after the Bambora acquisition.</li>
+          <li>Built a two-year plan to bring bank-to-bank settlement into Shift4's payment stack.</li>
+          <li>Built an ACH payment file merger with Claude, from specs to a working demo in one month. Rolled out to 2% of AMEX merchants in Q4 2026.</li>
+        </ul>
+      </div>
+      <div class="tl">
+        <span class="year">2024</span>
+        <h3>Head of Product Management &amp; Strategy, Merchant Services North America</h3>
+        <p class="where">Worldline · September 2024 to March 2026</p>
+        <ul>
+          <li>Led two product managers and set strategy for Worldline's North America merchant line.</li>
+          <li>Ran the roadmap across eight scrum teams at peak.</li>
+          <li>Kept the product vision continuous through Project Victoria, the divestment to Shift4.</li>
+        </ul>
+      </div>
+      <div class="tl">
+        <span class="year">2022</span>
+        <h3>Head of Product, ISV</h3>
+        <p class="where">Worldline · September 2022 to September 2024</p>
+        <ul>
+          <li>Owned a payments portfolio of 1,500+ ISVs, covering 120K merchants and $120B in annual bank-to-bank volume.</li>
+          <li>Grew the portfolio 25% year over year.</li>
+        </ul>
+      </div>
+      <div class="tl">
+        <span class="year">2022</span>
+        <h3>Senior Product Manager, Digital Solutions Canada</h3>
+        <p class="where">Global Payments · Montreal · January 2022 to September 2022</p>
+        <ul>
+          <li>Led the Bermuda merchant portfolio migration.</li>
+          <li>Led go-to-market for omnichannel payment apps and defined the vision for two SaaS brands.</li>
+        </ul>
+      </div>
+      <div class="tl">
+        <span class="year">2020</span>
+        <h3>Product Manager</h3>
+        <p class="where">Global Payments · Montreal · March 2020 to January 2022</p>
+        <ul>
+          <li>Led the Desjardins merchant portfolio migration in 2021, recognized with an internal award for execution.</li>
+          <li>Managed the product lifecycle for Global Payments Canada's digital solutions portfolio.</li>
+        </ul>
+      </div>
+      <div class="tl">
+        <span class="year">2019</span>
+        <h3>Founder &amp; Director of Product</h3>
+        <p class="where">FuzzyCrew · 2019 to 2020</p>
+        <ul>
+          <li>Ran AI-driven chatbot and digital transformation consulting for B2B and B2C clients.</li>
+        </ul>
+      </div>
+      <div class="tl">
+        <span class="year">2012</span>
+        <h3>Managing Director, Digital Transformation &amp; Product</h3>
+        <p class="where">Action Media / JoMedia / Playster · Montreal · 2012 to 2019</p>
+        <ul>
+          <li>Grew from IT project manager and product owner to managing director over seven years, leading six direct reports.</li>
+          <li>Led the company-wide Salesforce rollout.</li>
+          <li>Built an AI-driven risk and fraud tool that cut negative revenue by about $1.5M per quarter.</li>
+        </ul>
+      </div>
+      <div class="tl">
+        <span class="year">2009</span>
+        <h3>VP Product Management</h3>
+        <p class="where">iReel · Montreal · 2009 to 2012</p>
+        <ul>
+          <li>Managed 1,000+ affiliates across CPC, CPA and CPM campaigns, beating growth goals by more than 200%.</li>
+          <li>Set up an offshore support office from scratch, cutting costs 75%.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>
